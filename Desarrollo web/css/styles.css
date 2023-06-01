@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #C9E3AC;
+    font-family: 'Fira Sans', Verdana;
+    color: black;
+}
+
+/* ------------------------------------------------HEADER------------------------------------------------ */
+
+header {
+    height: 90px;
+    background-color: #90BE6D;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    height: 90px;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header nav img {
+    height: 80px;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    font-size: 20px;
+    position: relative;
+    right: 15%;
+}
+
+header nav li {
+    margin-left: 40px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+}
+
+.inpage {
+    background-color: #C9E3AC;
+    border-radius: 5px;
+}
+
+header ul a:hover {
+    background-color: #C9E3AC;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------HEADER------------------------------------------------ */
+
+/* -------------------------------------------------MAIN------------------------------------------------ */
+
+.fondoIndex {
+    position: relative;
+    height: 900px;
+    width: 100%;
+}
+
+.fondoIndex::before {
+    content: "";
+    position: absolute;
+    background-image: url(../multimedia/Fumigacion-1-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.fondoIndex main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    justify-content: center;
+}
+
+.mainIndex h1 {
+    margin-top: 50px;
+    margin-left: 50px;
+    z-index: 9;
+    color: white;
+    font-size: 90px;
+}
