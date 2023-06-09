@@ -23,49 +23,28 @@ header {
     z-index: 1000;
 }
 
-header nav {
-    display: flex;
-    height: 90px;
-    position: relative;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
 header nav img {
     height: 80px;
-    display: flex;
     margin-left: 10px;
-    margin-top: 5px;
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    font-size: 20px;
-    position: relative;
-    right: 15%;
+    font-size: 25px;
+    background-color: #90BE6D;
+    background-size: 100%;
+    border-radius: 10px;
 }
 
 header nav li {
-    margin-left: 40px;
+    margin-left: 5px;
+    margin-right: 100px;
 }
 
 header ul a {
     text-decoration: none;
     color: black;
     padding: 5px 20px;
-}
-
-.inpage {
-    background-color: #C9E3AC;
-    border-radius: 5px;
-}
-
-header ul a:hover {
-    background-color: #C9E3AC;
-    border-radius: 5px;
 }
 
 /* ------------------------------------------------HEADER------------------------------------------------ */
@@ -81,25 +60,32 @@ header ul a:hover {
 .fondoIndex::before {
     content: "";
     position: absolute;
-    background-image: url(../multimedia/Fumigacion-1-1.jpeg);
+    background-image: url("../multimedia/Fumigacion-1-1.jpeg");
     background-size: cover;
     background-position: center;
     height: 900px;
     width: 100%;
     opacity: 0.4;
+    z-index: -1;
 }
 
 .fondoIndex main {
-    display: flex;
-    flex-wrap: wrap;
-    width: 800px;
-    justify-content: center;
+
 }
 
 .mainIndex h1 {
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: 40px;
     z-index: 9;
     color: white;
     font-size: 90px;
+}
+
+/* -------------------------------------------------FOOTER------------------------------------------------ */
+
+footer {
+    height: 90px;
+}
+
+.redes img {
+    width: 30px;
 }
