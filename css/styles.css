@@ -30,17 +30,17 @@ header nav img {
   height: 80px;
   margin-left: 10px;
 }
-header nav a {
-  text-decoration: none;
-  color: black;
-}
 header nav ul {
   list-style: none;
   font-size: 25px;
   margin-left: 100px;
 }
-header nav li {
+header nav ul li {
   margin-right: 80px;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
 }
 
 /* -------------------------------------------------MAIN------------------------------------------------ */
@@ -65,6 +65,8 @@ header nav li {
   width: 50%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .fondoIndex .mainIndex h1 {
@@ -74,10 +76,27 @@ header nav li {
   font-size: 90px;
 }
 
-.mainContacto {
+.mainSobreNosotros, .mainLocalidades {
   background-color: #EA9010;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mainSobreNosotros h1, .mainLocalidades h1 {
+  font-size: 50px;
+  padding: 50px 0;
+}
+
+.lineaHorizontal {
+  border-top: 1px solid black;
+  margin: 45px 5px 40px 5px;
+}
+
+.mainContacto {
+  background-color: #EA9010;
   flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .mainContacto h1 {
@@ -91,6 +110,18 @@ header nav li {
   margin: 30px;
   font-size: 20px;
   text-align: center;
+}
+
+.mainClientes {
+  background-color: #EA9010;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.mainClientes h1 {
+  font-size: 50px;
+  padding: 50px;
 }
 
 /* -------------------------------------------------SECTION------------------------------------------------ */
@@ -110,6 +141,46 @@ header nav li {
   font-size: 30px;
 }
 
+.sectionSobreNosotros {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.sectionSobreNosotros img {
+  height: 200px;
+}
+.sectionSobreNosotros .articleSobreNosotros1 {
+  margin: 40px 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionSobreNosotros .articleSobreNosotros1 h4 {
+  font-size: 28px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.sectionSobreNosotros .articleSobreNosotros2 {
+  margin: 5px 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionSobreNosotros .articleSobreNosotros2 h4 {
+  font-size: 20px;
+}
+.sectionSobreNosotros .articleSobreNosotros2 img {
+  width: 405px;
+}
+.sectionSobreNosotros .articleSobreNosotros2 div {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.sectionSobreNosotros .articleSobreNosotros2 div h4 {
+  margin-bottom: 20px;
+}
+
 .sectionContacto {
   margin: 30px 0 50px;
 }
@@ -126,10 +197,75 @@ header nav li {
 .sectionContacto form input {
   height: 30px;
 }
+.sectionContacto form .number::-webkit-inner-spin-button, .sectionContacto form .number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.sectionContacto form textarea {
+  resize: none;
+  height: 100px;
+}
 .sectionContacto form .botonForm {
   margin-top: 30px;
   height: 35px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sectionLocalidades {
+  margin: 40px;
+  width: 900px;
+}
+.sectionLocalidades iframe {
+  height: 400px;
+  width: 800px;
+  margin-left: 50px;
+}
+.sectionLocalidades .carousel {
+  width: auto;
+}
+.sectionLocalidades .carouselLocal {
+  width: auto;
+}
+.sectionLocalidades .carouselLocal .botonIndicador {
+  height: 15px;
+}
+.sectionLocalidades h5 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.sectionClientes .articleClientes2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.sectionClientes .articleClientes2 img {
+  height: 300px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.sectionClientes .articleClientes2 .divClientes2 {
+  display: flex;
+  flex-direction: column;
+}
+.sectionClientes .articleClientes2 .divClientes2 p {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.sectionClientes .articleClientes2 .divClientes2 ul {
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style-type: circle;
+}
+.sectionClientes .articleClientes2 .divClientes2 ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.sectionClientes .articleClientes1 p {
+  font-size: 20px;
+  padding: 30px;
 }
 
 /* -------------------------------------------------FOOTER------------------------------------------------ */
@@ -174,12 +310,20 @@ footer h6 {
   header nav ul li {
     margin: 10px 0;
   }
+  .fondoIndex {
+    height: auto;
+  }
   .fondoIndex::before {
     height: 900px;
   }
-  .mainIndex h1 {
+  .fondoIndex .mainIndex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  .fondoIndex .mainIndex h1 {
     margin: 20px;
-    font-size: 60px;
+    font-size: 65px;
   }
   .sectionIndex h2 {
     font-size: 26px;
@@ -193,6 +337,44 @@ footer h6 {
     width: 200px;
     height: 100px;
     font-size: 25px;
+  }
+  .mainSobreNosotros, .mainLocalidades {
+    text-align: center;
+  }
+  .sectionSobreNosotros .articleSobreNosotros1 {
+    flex-direction: column;
+  }
+  .sectionSobreNosotros .articleSobreNosotros1 h4 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .sectionSobreNosotros .articleSobreNosotros1 img {
+    width: 600px;
+    height: 300px;
+  }
+  .sectionSobreNosotros .articleSobreNosotros2 {
+    margin-left: 0px;
+    flex-direction: column;
+  }
+  .sectionSobreNosotros .articleSobreNosotros2 h4 {
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+  .sectionSobreNosotros .articleSobreNosotros2 img {
+    margin-left: 40px;
+    width: 600px;
+    height: 300px;
+  }
+  .sectionLocalidades {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .sectionClientes .articleClientes2 {
+    flex-direction: column;
+  }
+  .sectionClientes .articleClientes2 img {
+    margin-right: 30px;
   }
   footer {
     height: auto;
@@ -217,14 +399,30 @@ footer h6 {
   .fondoIndex::before {
     height: 900px;
   }
-  .mainIndex {
+  .fondoIndex .mainIndex {
     width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .mainIndex h1 {
+  .fondoIndex .mainIndex h1 {
     font-size: 50px;
+  }
+  .mainSobreNosotros h1, .mainLocalidades h1 {
+    font-size: 25px;
+  }
+  .mainClientes h1 {
+    font-size: 25px;
+  }
+  .sectionSobreNosotros .articleSobreNosotros1 img {
+    width: 340px;
+    height: 170px;
+  }
+  .sectionSobreNosotros .articleSobreNosotros2 img {
+    width: 340px;
+    height: 170px;
+    margin-right: 0;
+    margin-left: 40px;
   }
   .sectionIndex h2 {
     margin-top: 0;
@@ -234,6 +432,24 @@ footer h6 {
     margin-top: 30px;
     height: 100px;
     font-size: 30px;
+  }
+  .sectionLocalidades {
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .sectionLocalidades .carousel {
+    width: auto;
+  }
+  .sectionLocalidades iframe {
+    width: 100%;
+    margin-left: 0;
+  }
+  .sectionClientes .articleClientes2 {
+    flex-direction: column;
+  }
+  .sectionClientes .articleClientes2 img {
+    height: auto;
   }
   .mainContacto h1 {
     font-size: 25px;
