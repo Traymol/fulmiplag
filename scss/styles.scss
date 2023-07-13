@@ -30,8 +30,8 @@ header {
     z-index: 1000;
     nav{
         img {
-        height: 80px;
-        margin-left: 10px;
+            height: 80px;
+            margin-left: 10px;
         }
         ul {
             list-style: none;
@@ -52,12 +52,12 @@ header {
 
 .fondoIndex {
     position: relative;
-    height: 900px;
+    height: auto;
     width: 100%;
     &::before{
         content: "";
         position: absolute;
-        background-image: url("../multimedia/Fumigacion-1-1.jpeg");
+        background-image: url("../multimedia/fumigacion-1-1.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -106,7 +106,7 @@ header {
         background-color: #eea43c;
         margin-top: 30px;
     }
-    p {
+    h2 {
         margin: 30px;
         font-size: 20px;
         text-align: center  ;
@@ -154,19 +154,19 @@ header {
     img {
         height: 200px;
     }
-    .articleSobreNosotros1 {
+    .divSobreNosotros1 {
         margin: 40px 0 0 40px;
         @include flex;
-        h4 {
+        h2 {
             font-size: 28px;
             margin-left: 40px;
             margin-right: 40px;
         }
     }
-    .articleSobreNosotros2 {
+    .divSobreNosotros2 {
         margin: 5px 0 0 40px;
         @include flex;
-        h4 {
+        h2 {
             font-size: 20px;
         }
         img {
@@ -176,7 +176,7 @@ header {
             margin-left: 40px;
             display: flex;
             flex-direction: column;
-            h4 {
+            h2 {
                 margin-bottom: 20px;
             }
         }
@@ -231,42 +231,55 @@ header {
             height: 15px;
         }
     }
-    h5 {
+    h2 {
         font-size: 40px;
         margin-bottom: 20px;
     }
 }
 
 .sectionClientes {
-    .articleClientes2 {
+    .divClientes2 {
         @include flex;
         justify-content: flex-start;
         img {
             height: 300px;
             margin-left: 30px;
-            margin-bottom: 30px;
+            margin-top: 50px;
         }
-        .divClientes2 {
+        .divDivClientes2 {
             display: flex;
             flex-direction: column;
             p {
                 font-size: 30px;
                 margin-left: 20px;
+                font-weight: bolder;
             }
             ul {
+                margin-bottom: 40px;
                 margin-left: 20px;
                 margin-right: 20px;
                 list-style-type: circle;
                 li {
                     font-size: 20px;
                     margin-bottom: 10px;
+                    p {
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                    }
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        font-weight: normal;
+                    }
                 }
             }
         }
 
     }
-    .articleClientes1 {
-        p {
+    .divClientes1 {
+        h2 {
             font-size: 20px;
             padding: 30px;
         }
@@ -291,13 +304,74 @@ footer {
     .redes img {
         width: 30px;
     }
-    h6 {
+    h3 {
         font-size: 15px;
         color: white;
     }
 }
 
 /* ------------------------------------------------RESPONSIVE------------------------------------------------ */
+
+@media (max-width: 1276px) {
+    .mainIndex {
+        width: 60%;
+        h1 {
+            font-size: 75px;
+        }
+    }
+    .sectionIndex {
+        width: 70%;
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 1228px) {
+    header {
+        nav{
+            img {
+                margin-left: 0;
+            }
+            ul {
+                margin-left: 50px;
+                li {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1007px) {
+    .fondoIndex {
+        .mainIndex {
+            width: 80%;
+        }
+    }
+    .sectionIndex {
+        .contactButton {
+            margin: 35px 50px;
+            button {
+                height: 40px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 950px) {
+    .sectionLocalidades {
+        width: 90%;
+        margin-right: 10px;
+        iframe {
+            margin-left: 24px;
+        }
+    }
+}
 
 @media (max-width: 768px) {
     header {
@@ -318,66 +392,67 @@ footer {
         }
     }
 
-    .fondoIndex {
-        height: auto;
-        &::before {
-            height: 900px;
-        }
+    .fondoIndex{
         .mainIndex {
             display: flex;
             flex-wrap: wrap;
-            width: 70%;
+            width: 80%;
             h1 {
                 margin: 20px;
                 font-size: 65px;
             }
         }
-    }
-
-
-    .sectionIndex {
-        h2 {
-        font-size: 26px;
-        margin-left: 20px;
-        }
-        .contactButton {
-            margin: 20px;
-            button {
-                margin-top: 50px;
-                width: 200px;
-                height: 100px;
-                font-size: 25px;
+        .sectionIndex {
+            h2 {
+            font-size: 26px;
+            margin-left: 20px;
+            }
+            .contactButton {
+                margin: 20px;
+                button {
+                    margin-top: 50px;
+                    width: 200px;
+                    height: 100px;
+                    font-size: 25px;
+                }
             }
         }
     }
+
+
 
     .mainSobreNosotros {
         text-align: center;
     }
 
     .sectionSobreNosotros {
-        .articleSobreNosotros1 {
-            h4 {
+        .divSobreNosotros1 {
+            flex-direction: column;
+            width: 90%;
+            h2 {
                 margin-top: 20px;
                 margin-left: 0;
             }
             flex-direction: column;
             img {
-                width: 600px;
-                height: 300px;
+                width: auto;
+                height: auto;
             }
         }
-        .articleSobreNosotros2 {
-            margin-left: 0px;
-            h4 {
+        .divSobreNosotros2 {
+            flex-direction: column;
+            width: 90%;
+            h2 {
                 margin-top: 20px;
-                margin-right: 40px;
+                margin-left: 0;
             }
             flex-direction: column;
             img {
-                margin-left: 40px;
-                width: 600px;
-                height: 300px;
+                width: auto;
+                height: auto;
+            }
+            div {
+                margin: 0;
             }
         }
     }
@@ -389,11 +464,14 @@ footer {
     }
 
     .sectionClientes {
-        .articleClientes2 {
+        .divClientes2 {
             flex-direction: column;
             img {
                 margin-right: 30px;
             }
+        }
+        .divDivClientes2 {
+            margin-top: 20px;
         }
     }
 
@@ -410,7 +488,7 @@ footer {
             .redes img {
                 width: 25px;
             }
-            h6 {
+            h3 {
                 font-size: 12px;
             }
         }
@@ -418,19 +496,28 @@ footer {
 
 }
 
+@media (max-width: 640px) {
+    .fondoIndex {
+        .sectionIndex {
+            width: 80%;
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
 @media (max-width: 430px) {
     .fondoIndex {
-        &::before {
-            height: 900px;
-        }
         .mainIndex {
-            width: 80%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            width: 100%;
             h1 {
                 font-size: 50px;
             }
+        }
+        .sectionIndex {
+            width: 100%;
         }
     }
 
@@ -447,18 +534,17 @@ footer {
     }
 
     .sectionSobreNosotros {
-        .articleSobreNosotros1 {
+        .divSobreNosotros1 {
             img {
-                width: 340px;
-                height: 170px;
+                width: 90%;
             }
         }
-        .articleSobreNosotros2 {
+        .divSobreNosotros2 {
+            div {
+                margin-right: 20px;
+            }
             img {
-                width: 340px;
-                height: 170px;
-                margin-right: 0;
-                margin-left: 40px;
+                width: 90%;
             }
         }
     }
@@ -489,7 +575,7 @@ footer {
     }
 
     .sectionClientes {
-        .articleClientes2 {
+        .divClientes2 {
             flex-direction: column;
             img {
                 height: auto;
@@ -504,6 +590,23 @@ footer {
         p {
             font-size: 15px;
             margin: 20px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .sectionSobreNosotros {
+        margin-right: 15px;
+        margin-left: 15px;
+        .divSobreNosotros1 {
+            h2 {
+                font-size: 20px;
+            }
+        }
+        .divSobreNosotros2 {
+            h2 {
+                font-size: 18px;
+            }
         }
     }
 }

@@ -46,13 +46,13 @@ header nav ul a {
 /* -------------------------------------------------MAIN------------------------------------------------ */
 .fondoIndex {
   position: relative;
-  height: 900px;
+  height: auto;
   width: 100%;
 }
 .fondoIndex::before {
   content: "";
   position: absolute;
-  background-image: url("../multimedia/Fumigacion-1-1.jpeg");
+  background-image: url("../multimedia/fumigacion-1-1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -106,7 +106,7 @@ header nav ul a {
   background-color: #eea43c;
   margin-top: 30px;
 }
-.mainContacto p {
+.mainContacto h2 {
   margin: 30px;
   font-size: 20px;
   text-align: center;
@@ -149,35 +149,35 @@ header nav ul a {
 .sectionSobreNosotros img {
   height: 200px;
 }
-.sectionSobreNosotros .articleSobreNosotros1 {
+.sectionSobreNosotros .divSobreNosotros1 {
   margin: 40px 0 0 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.sectionSobreNosotros .articleSobreNosotros1 h4 {
+.sectionSobreNosotros .divSobreNosotros1 h2 {
   font-size: 28px;
   margin-left: 40px;
   margin-right: 40px;
 }
-.sectionSobreNosotros .articleSobreNosotros2 {
+.sectionSobreNosotros .divSobreNosotros2 {
   margin: 5px 0 0 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.sectionSobreNosotros .articleSobreNosotros2 h4 {
+.sectionSobreNosotros .divSobreNosotros2 h2 {
   font-size: 20px;
 }
-.sectionSobreNosotros .articleSobreNosotros2 img {
+.sectionSobreNosotros .divSobreNosotros2 img {
   width: 405px;
 }
-.sectionSobreNosotros .articleSobreNosotros2 div {
+.sectionSobreNosotros .divSobreNosotros2 div {
   margin-left: 40px;
   display: flex;
   flex-direction: column;
 }
-.sectionSobreNosotros .articleSobreNosotros2 div h4 {
+.sectionSobreNosotros .divSobreNosotros2 div h2 {
   margin-bottom: 20px;
 }
 
@@ -230,40 +230,53 @@ header nav ul a {
 .sectionLocalidades .carouselLocal .botonIndicador {
   height: 15px;
 }
-.sectionLocalidades h5 {
+.sectionLocalidades h2 {
   font-size: 40px;
   margin-bottom: 20px;
 }
 
-.sectionClientes .articleClientes2 {
+.sectionClientes .divClientes2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: flex-start;
 }
-.sectionClientes .articleClientes2 img {
+.sectionClientes .divClientes2 img {
   height: 300px;
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
 }
-.sectionClientes .articleClientes2 .divClientes2 {
+.sectionClientes .divClientes2 .divDivClientes2 {
   display: flex;
   flex-direction: column;
 }
-.sectionClientes .articleClientes2 .divClientes2 p {
+.sectionClientes .divClientes2 .divDivClientes2 p {
   font-size: 30px;
   margin-left: 20px;
+  font-weight: bolder;
 }
-.sectionClientes .articleClientes2 .divClientes2 ul {
+.sectionClientes .divClientes2 .divDivClientes2 ul {
+  margin-bottom: 40px;
   margin-left: 20px;
   margin-right: 20px;
   list-style-type: circle;
 }
-.sectionClientes .articleClientes2 .divClientes2 ul li {
+.sectionClientes .divClientes2 .divDivClientes2 ul li {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.sectionClientes .articleClientes1 p {
+.sectionClientes .divClientes2 .divDivClientes2 ul li p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.sectionClientes .divClientes2 .divDivClientes2 ul li h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.sectionClientes .divClientes1 h2 {
   font-size: 20px;
   padding: 30px;
 }
@@ -286,12 +299,58 @@ footer .a {
 footer .redes img {
   width: 30px;
 }
-footer h6 {
+footer h3 {
   font-size: 15px;
   color: white;
 }
 
 /* ------------------------------------------------RESPONSIVE------------------------------------------------ */
+@media (max-width: 1276px) {
+  .mainIndex {
+    width: 60%;
+  }
+  .mainIndex h1 {
+    font-size: 75px;
+  }
+  .sectionIndex {
+    width: 70%;
+  }
+  .sectionIndex h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1228px) {
+  header nav img {
+    margin-left: 0;
+  }
+  header nav ul {
+    margin-left: 50px;
+  }
+  header nav ul li {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 1007px) {
+  .fondoIndex .mainIndex {
+    width: 80%;
+  }
+  .sectionIndex .contactButton {
+    margin: 35px 50px;
+  }
+  .sectionIndex .contactButton button {
+    height: 40px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 950px) {
+  .sectionLocalidades {
+    width: 90%;
+    margin-right: 10px;
+  }
+  .sectionLocalidades iframe {
+    margin-left: 24px;
+  }
+}
 @media (max-width: 768px) {
   header {
     height: auto;
@@ -310,29 +369,23 @@ footer h6 {
   header nav ul li {
     margin: 10px 0;
   }
-  .fondoIndex {
-    height: auto;
-  }
-  .fondoIndex::before {
-    height: 900px;
-  }
   .fondoIndex .mainIndex {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
   }
   .fondoIndex .mainIndex h1 {
     margin: 20px;
     font-size: 65px;
   }
-  .sectionIndex h2 {
+  .fondoIndex .sectionIndex h2 {
     font-size: 26px;
     margin-left: 20px;
   }
-  .sectionIndex .contactButton {
+  .fondoIndex .sectionIndex .contactButton {
     margin: 20px;
   }
-  .sectionIndex .contactButton button {
+  .fondoIndex .sectionIndex .contactButton button {
     margin-top: 50px;
     width: 200px;
     height: 100px;
@@ -341,40 +394,48 @@ footer h6 {
   .mainSobreNosotros, .mainLocalidades {
     text-align: center;
   }
-  .sectionSobreNosotros .articleSobreNosotros1 {
+  .sectionSobreNosotros .divSobreNosotros1 {
+    flex-direction: column;
+    width: 90%;
     flex-direction: column;
   }
-  .sectionSobreNosotros .articleSobreNosotros1 h4 {
+  .sectionSobreNosotros .divSobreNosotros1 h2 {
     margin-top: 20px;
     margin-left: 0;
   }
-  .sectionSobreNosotros .articleSobreNosotros1 img {
-    width: 600px;
-    height: 300px;
+  .sectionSobreNosotros .divSobreNosotros1 img {
+    width: auto;
+    height: auto;
   }
-  .sectionSobreNosotros .articleSobreNosotros2 {
-    margin-left: 0px;
+  .sectionSobreNosotros .divSobreNosotros2 {
+    flex-direction: column;
+    width: 90%;
     flex-direction: column;
   }
-  .sectionSobreNosotros .articleSobreNosotros2 h4 {
+  .sectionSobreNosotros .divSobreNosotros2 h2 {
     margin-top: 20px;
-    margin-right: 40px;
+    margin-left: 0;
   }
-  .sectionSobreNosotros .articleSobreNosotros2 img {
-    margin-left: 40px;
-    width: 600px;
-    height: 300px;
+  .sectionSobreNosotros .divSobreNosotros2 img {
+    width: auto;
+    height: auto;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 div {
+    margin: 0;
   }
   .sectionLocalidades {
     width: 90%;
     margin-left: 0;
     margin-right: 20px;
   }
-  .sectionClientes .articleClientes2 {
+  .sectionClientes .divClientes2 {
     flex-direction: column;
   }
-  .sectionClientes .articleClientes2 img {
+  .sectionClientes .divClientes2 img {
     margin-right: 30px;
+  }
+  .sectionClientes .divDivClientes2 {
+    margin-top: 20px;
   }
   footer {
     height: auto;
@@ -391,22 +452,27 @@ footer h6 {
   footer .footer .redes img {
     width: 25px;
   }
-  footer .footer h6 {
+  footer .footer h3 {
     font-size: 12px;
   }
 }
-@media (max-width: 430px) {
-  .fondoIndex::before {
-    height: 900px;
-  }
-  .fondoIndex .mainIndex {
+@media (max-width: 640px) {
+  .fondoIndex .sectionIndex {
     width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  }
+  .fondoIndex .sectionIndex h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .fondoIndex .mainIndex {
+    width: 100%;
   }
   .fondoIndex .mainIndex h1 {
     font-size: 50px;
+  }
+  .fondoIndex .sectionIndex {
+    width: 100%;
   }
   .mainSobreNosotros h1, .mainLocalidades h1 {
     font-size: 25px;
@@ -414,15 +480,14 @@ footer h6 {
   .mainClientes h1 {
     font-size: 25px;
   }
-  .sectionSobreNosotros .articleSobreNosotros1 img {
-    width: 340px;
-    height: 170px;
+  .sectionSobreNosotros .divSobreNosotros1 img {
+    width: 90%;
   }
-  .sectionSobreNosotros .articleSobreNosotros2 img {
-    width: 340px;
-    height: 170px;
-    margin-right: 0;
-    margin-left: 40px;
+  .sectionSobreNosotros .divSobreNosotros2 div {
+    margin-right: 20px;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 img {
+    width: 90%;
   }
   .sectionIndex h2 {
     margin-top: 0;
@@ -445,10 +510,10 @@ footer h6 {
     width: 100%;
     margin-left: 0;
   }
-  .sectionClientes .articleClientes2 {
+  .sectionClientes .divClientes2 {
     flex-direction: column;
   }
-  .sectionClientes .articleClientes2 img {
+  .sectionClientes .divClientes2 img {
     height: auto;
   }
   .mainContacto h1 {
@@ -457,6 +522,18 @@ footer h6 {
   .mainContacto p {
     font-size: 15px;
     margin: 20px;
+  }
+}
+@media (max-width: 390px) {
+  .sectionSobreNosotros {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 h2 {
+    font-size: 20px;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 h2 {
+    font-size: 18px;
   }
 }
 
