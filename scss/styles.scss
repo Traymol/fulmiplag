@@ -510,10 +510,11 @@ footer {
 
 @media (max-width: 430px) {
     .fondoIndex {
+        height: auto;
         .mainIndex {
             width: 100%;
             h1 {
-                font-size: 50px;
+                font-size: 60px;
             }
         }
         .sectionIndex {
